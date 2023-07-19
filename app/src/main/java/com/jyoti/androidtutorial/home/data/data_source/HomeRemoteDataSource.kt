@@ -8,6 +8,6 @@ import retrofit2.http.GET
 interface HomeRemoteDataSource {
 
     @GET("/home")
-    fun fetchHomeDataRemote(): Call<HomeResponseModel?>?
+    fun fetchHomeDataRemote(): Call<HomeResponseModel?>
 
 }
