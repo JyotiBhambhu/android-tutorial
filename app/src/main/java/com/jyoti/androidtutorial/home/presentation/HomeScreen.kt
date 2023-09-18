@@ -10,22 +10,11 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import com.jyoti.androidtutorial.home.data.data_source.HomeRemoteDataSource
-import com.jyoti.androidtutorial.home.data.repo.HomeRepoImpl
-import com.jyoti.androidtutorial.home.domain.HomeUseCase
-import retrofit2.Retrofit
 
 
 @Composable
 fun HomeScreen(
-    retrofit: Retrofit,
-    homeViewModel: HomeViewModel = HomeViewModel(
-        homeUseCase = HomeUseCase(
-            homeRepo = HomeRepoImpl(
-                homeRemoteDataSource = retrofit.create(HomeRemoteDataSource::class.java)
-            )
-        )
-    )
+    homeViewModel: HomeViewModel
 ) {
     val isLoading = remember {
         mutableStateOf(true)

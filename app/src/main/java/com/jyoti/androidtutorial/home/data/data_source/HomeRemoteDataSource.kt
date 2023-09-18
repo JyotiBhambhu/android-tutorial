@@ -5,7 +5,7 @@ import retrofit2.Call
 import retrofit2.http.GET
 
 
-interface HomeRemoteDataSource {
+fun interface HomeRemoteDataSource {
 
     @GET("/home")
     fun fetchHomeDataRemote(): Call<HomeResponseModel?>
